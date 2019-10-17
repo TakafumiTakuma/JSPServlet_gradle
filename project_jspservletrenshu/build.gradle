@@ -1,0 +1,33 @@
+import jdk.nashorn.internal.objects.annotations.Getter
+import jdk.nashorn.internal.objects.annotations.Setter
+
+//plugins {
+//    id 'war'
+//}
+//
+//group 'com.jspservletrenshu'
+//version '1.0-SNAPSHOT'
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    testCompile group: 'junit', name: 'junit', version: '4.11'
+//}
+
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+//ここに追加したいライブラリーの設定を行う
+dependencies {
+    providedCompile 'javax.servlet:javax.servlet-api:4.0.0'
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
+}
+
+
+
+
