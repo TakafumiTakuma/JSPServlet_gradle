@@ -42,4 +42,23 @@ public class SqlMthos {
             return false;
         }
     }
+    public boolean InsertEmploee(String name, String age, String tell, String password ) throws SQLException {
+
+        String sql = "INSERT INTO (name,age,tell,password) VALUES (?,?,?,?)";
+        Connection con = DBM.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1,name);
+        ps.setString(2,age);
+        ps.setString(3,tell);
+        ps.setString(4,password);
+
+        int result = ps.executeUpdate();
+        System.out.println(result);
+
+        if(result == 1){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

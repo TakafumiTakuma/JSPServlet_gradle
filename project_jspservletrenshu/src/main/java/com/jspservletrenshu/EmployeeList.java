@@ -36,9 +36,6 @@ public class EmployeeList extends HttpServlet {
         int namefrg = 0;
         int passfrg = 0;
 
-        /**
-         * ログイン入力チェック
-         */
         if (username.equals("") || username == null) {
             request.setAttribute("nameerrer", "ユーザー名が正しくありません");
             namefrg = 1;
@@ -55,6 +52,12 @@ public class EmployeeList extends HttpServlet {
             return;
 
         }
+
+
+        /**
+         * ログイン入力チェック
+         */
+
 
         try {
 
