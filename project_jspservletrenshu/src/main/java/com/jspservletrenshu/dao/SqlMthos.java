@@ -11,38 +11,35 @@ import java.util.List;
 public class SqlMthos {
 
     private String sql = "select * from user";
-    public List<EmployeeBean>getSelectEmploeeAll() throws SQLException{
+
+    public List<EmployeeBean> getSelectEmploeeAll() throws SQLException {
         Connection con = DBM.getConnection();
         Statement stmt = con.createStatement();
         ResultSet result = stmt.executeQuery(sql);
 
         List<EmployeeBean> employeelist = new ArrayList<EmployeeBean>();
 
-        while(result.next()){
+        while (result.next()) {
             EmployeeBean employeebean = new EmployeeBean(result);
             employeelist.add(employeebean);
         }
         return employeelist;
     }
 
-    public boolean getSelectEmploee(String userid, String userpassword) throws SQLException{
-        String sql = "select * from user where id = ? AND password = ?";
+    public boolean getSelectEmploee(String name, String password) throws SQLException {
+
+        String sql = "select * from user WHERE name = ? AND password = ?";
         Connection con = DBM.getConnection();
         PreparedStatement ps = con.prepareStatement(sql);
-        ps.setString(1, userid);
-        ps.setString(2, userpassword);
+        ps.setString(1, name);
+        ps.setString(2, password);
 
-        ResultSet result = ps.executeQuery(sql);
+        ResultSet result = ps.executeQuery();
 
-        if(result.next() == true){
+        if (result.next() == true) {
             return true;
         }else{
             return false;
         }
-
-
-
     }
-
-
 }
