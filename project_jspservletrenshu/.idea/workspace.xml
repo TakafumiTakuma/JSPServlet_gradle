@@ -2,26 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f0a7cee-a6aa-415c-8f93-2f5c30e05cfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeInsert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeInsertConf.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/insert.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/insertconf.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/bean/EmployeeInsertBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/inserdend.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeInsert.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeInsert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeInsertConf.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeInsertConf.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/bean/EmployeeBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/bean/EmployeeBean.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/dao/SqlMthos.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/dao/SqlMthos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/project_jspservletrenshu.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/project_jspservletrenshu.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeInsert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeInsert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeInsertConf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeInsertConf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/bean/EmployeeBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/bean/EmployeeBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/dao/SqlMthos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/dao/SqlMthos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/insertconf.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/insertconf.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,8 +77,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -253,7 +253,18 @@
       <workItem from="1571638319187" duration="196000" />
       <workItem from="1571638527163" duration="1469000" />
       <workItem from="1571640016420" duration="298000" />
-      <workItem from="1571640327711" duration="1222000" />
+      <workItem from="1571640327711" duration="1814000" />
+      <workItem from="1571790216364" duration="739000" />
+      <workItem from="1571792781804" duration="274000" />
+      <workItem from="1571793067739" duration="524000" />
+      <workItem from="1571793604354" duration="1567000" />
+      <workItem from="1571795193782" duration="2326000" />
+      <workItem from="1571798550122" duration="5204000" />
+      <workItem from="1571810868878" duration="472000" />
+      <workItem from="1571811353451" duration="513000" />
+      <workItem from="1571811878548" duration="269000" />
+      <workItem from="1571812159380" duration="2421000" />
+      <workItem from="1571816483846" duration="237000" />
     </task>
     <servers />
   </component>

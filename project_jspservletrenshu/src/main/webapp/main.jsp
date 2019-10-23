@@ -13,7 +13,7 @@
 </head>
 <body>
 <h1>メイン画面</h1>
-<a href="insert.jsp"?>新規登録はこちら</a>
+<a href="insert.jsp">新規登録はこちら</a>
 <table border = 1>
     <tr>
         <th>ID</th>

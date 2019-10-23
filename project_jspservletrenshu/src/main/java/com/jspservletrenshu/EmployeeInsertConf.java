@@ -21,6 +21,7 @@ public class EmployeeInsertConf extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+
         String name = request.getParameter("name");
         String age = request.getParameter("age");
         String tell = request.getParameter("tell");
@@ -48,7 +49,7 @@ public class EmployeeInsertConf extends HttpServlet {
             tellfrg = 1;
         }
         if (password.equals("") || password == null) {
-            request.setAttribute("passerrer", "パスワードが正しくありません");
+            request.setAttribute("passworderrer", "パスワードが正しくありません");
             passwordfrg = 1;
         }
 

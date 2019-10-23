@@ -44,7 +44,7 @@ public class EmployeeBean {
         return age;
     }
 
-    public void getTell(String tell){
+    public void setTell(String tell){
         this.tell = tell;
     }
     public String getTell(){
@@ -58,7 +58,7 @@ public class EmployeeBean {
         return password;
     }
 
-    //新規会員登録をする際に利用するメソッド
+    //会員情報を一覧表示する際、一度に値を登録する時に利用するメソッド
     public EmployeeBean(String id, String name, String age, String tell, String password){
         this.id = id;
         this.name = name;

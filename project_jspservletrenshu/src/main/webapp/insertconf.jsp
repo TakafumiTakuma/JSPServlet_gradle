@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.jspservletrenshu.bean.EmployeeBean" %>
+<%@ page import="com.jspservletrenshu.bean.EmployeeInsertBean" %><%--
   Created by IntelliJ IDEA.
   User: takumatakashi
   Date: 2019/10/21
@@ -17,27 +18,20 @@ String age = (String)request.getAttribute("age");
 String tell = (String)request.getAttribute("tell");
 String password = (String)request.getAttribute("password");
 
-if(name == null){
-    name = "";
-}
-if(age == null){
-    age = "";
-}
-if(tell == null){
-    tell = "";
-}
-if(password == null){
-    password = "";
-}
+
+EmployeeInsertBean employeeInsertBean = new EmployeeInsertBean(name,age,tell,password);
+
+request.setAttribute("employeeInsertBean",employeeInsertBean);
+
 
 %>
 <h1>確認画面</h1>
 <p>下記の通りに登録します</p>
 <form action="EmployeeInsert" method = "get">
 名前:<%=name%><br>
-年齢:<%=age %><br>
-電話番号:<%=tell %><br>
-パスワード:<%=password %><br>
+年齢:<%=age%><br>
+電話番号:<%=tell%><br>
+パスワード:<%=password%><br>
     <input type="submit" value="登録">
 </form>
 </body>
