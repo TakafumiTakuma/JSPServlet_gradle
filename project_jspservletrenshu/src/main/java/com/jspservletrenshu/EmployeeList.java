@@ -28,6 +28,8 @@ public class EmployeeList extends HttpServlet {
         request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
 
+
+
         String username = (String) request.getParameter("name");
         String userpass = (String) request.getParameter("pass");
 
@@ -53,12 +55,9 @@ public class EmployeeList extends HttpServlet {
 
         }
 
-
         /**
          * ログイン入力チェック
          */
-
-
         try {
 
             SqlMthos sqlmthos = new SqlMthos();
