@@ -9,6 +9,7 @@ public class EmployeeBean {
     private String age;
     private String tell;
     private String password;
+    private String code;
 
     //データベースから会員情報を一覧表示する際に利用するメソッド
     public EmployeeBean(ResultSet rs){
@@ -18,6 +19,7 @@ public class EmployeeBean {
             age = rs.getString(3);
             tell = rs.getString(4);
             password = rs.getString(5);
+            code = rs.getString(6);
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -58,13 +60,23 @@ public class EmployeeBean {
         return password;
     }
 
+    public void setCode(String code){
+        this.code = code;
+    }
+    public String getCode(){
+        return code;
+    }
+
+
+
     //会員情報を一覧表示する際、一度に値を登録する時に利用するメソッド
-    public EmployeeBean(String id, String name, String age, String tell, String password){
+    public EmployeeBean(String id, String name, String age, String tell, String password, String code){
         this.id = id;
         this.name = name;
         this.age = age;
         this.tell = tell;
         this.password = password;
+        this.code = code;
     }
 
 }

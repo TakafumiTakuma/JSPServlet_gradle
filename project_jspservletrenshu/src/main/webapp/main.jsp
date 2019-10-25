@@ -21,6 +21,7 @@
         <th>年齢</th>
         <th>電話番号</th>
         <th>パスワード</th>
+        <th>コード</th>
     </tr>
     <c:forEach var="list" items="${employeelists}">
         <tr>
@@ -29,6 +30,7 @@
             <td>${list.age}</td>
             <td>${list.tell}</td>
             <td>${list.password}</td>
+            <td>${list.code}</td>
         </tr>
     </c:forEach>
 </table>

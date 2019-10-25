@@ -80,8 +80,9 @@ public class EmployeeList extends HttpServlet {
                     String age = eb.getAge();
                     String tell = eb.getTell();
                     String pass = eb.getPassword();
+                    String code = eb.getCode();
 
-                    employeelist.add(new EmployeeBean(id, name, age, tell, pass));
+                    employeelist.add(new EmployeeBean(id, name, age, tell, pass,code));
                 }
                 request.setAttribute("employeelists", employeelist);
                 RequestDispatcher dispatch1 = request.getRequestDispatcher("main.jsp");

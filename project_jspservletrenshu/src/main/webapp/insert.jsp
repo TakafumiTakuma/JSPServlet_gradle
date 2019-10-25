@@ -16,6 +16,7 @@ String name_errer_msg = (String)request.getAttribute("insert_name_errer");
 String age_errer_msg = (String)request.getAttribute("insert_age_errer");
 String tell_errer_msg = (String)request.getAttribute("insert_tell_errer");
 String password_errer_msg = (String)request.getAttribute("insert_password_errer");
+String code_errer_msg = (String)request.getAttribute("insert_password_errer");
 
 
 if(name_errer_msg == null){
@@ -33,6 +34,9 @@ if(tell_errer_msg == null){
 if(password_errer_msg == null){
     password_errer_msg = "";
 }
+if(code_errer_msg == null){
+    code_errer_msg = "";
+}
 %>
 <h1>会員登録画面</h1>
 <form action="EmployeeInsert" method="get">
@@ -40,6 +44,7 @@ if(password_errer_msg == null){
     年齢<input type="text" name = "age"><%=age_errer_msg%><br>
     電話番号<input type="text" name = "tell"><%=tell_errer_msg%><br>
     パスワード<input type="password" name = "password"><%=password_errer_msg%><br>
+    コード<input type="text" name = "code"><%=code_errer_msg %>>
     <input type="submit" value="登録">
 </form>
 <form action = "index.jsp" method ="get">

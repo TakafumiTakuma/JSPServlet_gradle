@@ -1,7 +1,5 @@
 package com.jspservletrenshu;
 
-import com.jspservletrenshu.bean.EmployeeBean;
-import com.jspservletrenshu.bean.EmployeeInsertBean;
 import com.jspservletrenshu.dao.SqlMthos;
 
 import javax.servlet.RequestDispatcher;
@@ -12,8 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 @WebServlet("/EmployeeInsert")
 public class EmployeeInsert extends HttpServlet {
@@ -32,11 +28,13 @@ public class EmployeeInsert extends HttpServlet {
         String insert_age = (String)request.getParameter("age");
         String insert_tell = (String)request.getParameter("tell");
         String insert_password = (String)request.getParameter("password");
+        String insert_code = (String)request.getParameter("code");
 
         int insert_namefrg = 0;
         int insert_agefrg = 0;
         int insert_tellfrg = 0;
         int insert_passwordfrg = 0;
+        int insert_codefrg = 0;
 
         if(insert_name.equals("") || insert_name == null){
             request.setAttribute("insert_name_errer","名前の入力が正しくありません");
@@ -55,7 +53,12 @@ public class EmployeeInsert extends HttpServlet {
             insert_passwordfrg = 1;
         }
 
-        if(insert_namefrg == 1 || insert_agefrg == 1 || insert_tellfrg == 1 || insert_passwordfrg == 1){
+        if(insert_code.equals("") || insert_code == null){
+            request.setAttribute("insert_password_errer","パスワードの入力が正しくありません");
+            insert_codefrg = 1;
+        }
+
+        if(insert_namefrg == 1 || insert_agefrg == 1 || insert_tellfrg == 1 || insert_passwordfrg == 1 || insert_codefrg == 1){
 
             RequestDispatcher dispatch = request.getRequestDispatcher("insert.jsp");
             dispatch.forward(request, response);
@@ -65,7 +68,7 @@ public class EmployeeInsert extends HttpServlet {
         SqlMthos sqlmethod = new SqlMthos();
 
         try{
-            sqlmethod.InsertEmploee(insert_name,insert_age,insert_tell,insert_password);
+            sqlmethod.InsertEmploee(insert_name,insert_age,insert_tell,insert_password,insert_code);
             RequestDispatcher dispatch1 = request.getRequestDispatcher("insertend.jsp");
             dispatch1.forward(request, response);
 
