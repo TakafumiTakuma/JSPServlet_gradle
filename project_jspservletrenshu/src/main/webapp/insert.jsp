@@ -48,7 +48,7 @@ if(code_errer_msg == null){
     <input type="submit" value="登録">
 </form>
 <form action = "index.jsp" method ="get">
-    <input type="submit" value="戻る">
+    <input type="submit" name ="hiddenid" value="戻る">
 </form>
 </body>
 </html>

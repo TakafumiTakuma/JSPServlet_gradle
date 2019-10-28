@@ -14,6 +14,7 @@
 <body>
 <h1>メイン画面</h1>
 <a href="insert.jsp">新規登録はこちら</a>
+<a href="update.jsp">会員情報の変更はこちら</a>
 <table border = 1>
     <tr>
         <th>ID</th>

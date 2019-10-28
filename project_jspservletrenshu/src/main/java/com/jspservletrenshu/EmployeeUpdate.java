@@ -1,5 +1,7 @@
 package com.jspservletrenshu;
 
+import com.jspservletrenshu.dao.SqlMthos;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,42 +28,60 @@ public class EmployeeUpdate extends HttpServlet {
         String tell = (String)request.getParameter("tell");
         String password = (String)request.getParameter("password");
         String code = (String)request.getParameter("code");
+        String hidden = (String)request.getParameter("hidden");
 
-        int namefrg = 0;
-        int agefrg = 0;
-        int tellfrg = 0;
-        int passwordfrg = 0;
+//        int namefrg = 0;
+//        int agefrg = 0;
+//        int tellfrg = 0;
+//        int passwordfrg = 0;
         int codefrg = 0;
 
 
-        if(name.equals("") || name == null){
-            request.setAttribute("nameerrer","名前の入力が正しくありません");
-            namefrg = 1;
-        }
-
-        if(age.equals("") || age == null){
-            request.setAttribute("ageerrer","年齢の入力が正しくありません");
-            agefrg = 1;
-        }
-
-        if(tell.equals("") || tell == null){
-            request.setAttribute("tellerrer","電話番号の入力が正しくありません");
-            tellfrg = 1;
-        }
-
-        if(password.equals("") || password == null){
-            request.setAttribute("passworderrer","パスワードの入力が正しくありません");
-            passwordfrg = 1;
-        }
+//        if(name.equals("") || name == null){
+//            request.setAttribute("nameerrer","名前の入力が正しくありません");
+//            namefrg = 1;
+//        }
+//
+//        if(age.equals("") || age == null){
+//            request.setAttribute("ageerrer","年齢の入力が正しくありません");
+//            agefrg = 1;
+//        }
+//
+//        if(tell.equals("") || tell == null){
+//            request.setAttribute("tellerrer","電話番号の入力が正しくありません");
+//            tellfrg = 1;
+//        }
+//
+//        if(password.equals("") || password == null){
+//            request.setAttribute("passworderrer","パスワードの入力が正しくありません");
+//            passwordfrg = 1;
+//        }
 
         if(code.equals("") || password == null){
             request.setAttribute("codeerrer","コードの入力が正しくありません");
+            codefrg = 1;
         }
 
-        if(namefrg == 1 || agefrg == 1 || tellfrg == 1 || passwordfrg == 1){
+        if(codefrg == 1){
             RequestDispatcher dispatcher = request.getRequestDispatcher("update.jsp");
             dispatcher.forward(request,response);
+
+            return;
             
+        }
+
+        SqlMthos sqlmthos = new SqlMthos();
+
+        try{
+            sqlmthos.UpdateEmployee(name,age,tell,password,code);
+            request.setAttribute("hiddenid",hidden);
+
+            RequestDispatcher dispatcher = request.getRequestDispatcher("EmployeeList");
+            dispatcher.forward(request,response);
+        }catch (SQLException e){
+            e.printStackTrace();
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 

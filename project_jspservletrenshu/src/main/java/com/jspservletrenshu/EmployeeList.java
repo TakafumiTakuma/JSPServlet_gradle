@@ -33,10 +33,12 @@ public class EmployeeList extends HttpServlet {
         String username = (String) request.getParameter("name");
         String userpass = (String) request.getParameter("pass");
 
+        String hidden_val = (String) request.getAttribute("hiddenid");
 
 
         int namefrg = 0;
         int passfrg = 0;
+
 
         if (username.equals("") || username == null) {
             request.setAttribute("nameerrer", "ユーザー名が正しくありません");
@@ -48,55 +50,59 @@ public class EmployeeList extends HttpServlet {
             passfrg = 1;
         }
 
-        if (namefrg == 1 || passfrg == 1) {
+        if (namefrg == 1 || passfrg == 1 || hidden_val == null) {
             RequestDispatcher dispatch1 = request.getRequestDispatcher("index.jsp");
             dispatch1.forward(request, response);
             return;
 
-        }
+        }else {
 
-        /**
-         * ログイン入力チェック
-         */
-        try {
+            /**
+             * ログイン入力チェック
+             */
+            try {
 
-            SqlMthos sqlmthos = new SqlMthos();
-            System.out.println("59行");
+                SqlMthos sqlmthos = new SqlMthos();
+                System.out.println("59行");
 
 
-            if (sqlmthos.getSelectEmploee(username, userpass)) {
-                System.out.println("ログイン成功");
-                List<EmployeeBean> emplist;
-                emplist = sqlmthos.getSelectEmploeeAll();
+                if (sqlmthos.getSelectEmploee(username, userpass)) {
+                    System.out.println("ログイン成功");
+                    List<EmployeeBean> emplist;
+                    emplist = sqlmthos.getSelectEmploeeAll();
 
-                //会員情報一覧を表示するための配列を生成
-                ArrayList<EmployeeBean> employeelist = new ArrayList<EmployeeBean>();
+                    //会員情報一覧を表示するための配列を生成
+                    ArrayList<EmployeeBean> employeelist = new ArrayList<EmployeeBean>();
 
-                //データベースから会員情報のデータを読み取る
-                for (int i = 0; i < emplist.size(); i++) {
-                    EmployeeBean eb = emplist.get(i);
-                    String id = eb.getId();
-                    String name = eb.getName();
-                    String age = eb.getAge();
-                    String tell = eb.getTell();
-                    String pass = eb.getPassword();
-                    String code = eb.getCode();
+                    //データベースから会員情報のデータを読み取る
+                    for (int i = 0; i < emplist.size(); i++) {
+                        EmployeeBean eb = emplist.get(i);
+                        String id = eb.getId();
+                        String name = eb.getName();
+                        String age = eb.getAge();
+                        String tell = eb.getTell();
+                        String pass = eb.getPassword();
+                        String code = eb.getCode();
 
-                    employeelist.add(new EmployeeBean(id, name, age, tell, pass,code));
+                        employeelist.add(new EmployeeBean(id, name, age, tell, pass,code));
+                    }
+                    request.setAttribute("employeelists", employeelist);
+                    RequestDispatcher dispatch1 = request.getRequestDispatcher("main.jsp");
+                    dispatch1.forward(request, response);
+                }else{
+                    System.out.println("ログインエラー");
+                    request.setAttribute("emperrer", "該当する会員情報がございません");
+                    RequestDispatcher dispatch2 = request.getRequestDispatcher("index.jsp");
+                    dispatch2.forward(request, response);
                 }
-                request.setAttribute("employeelists", employeelist);
-                RequestDispatcher dispatch1 = request.getRequestDispatcher("main.jsp");
-                dispatch1.forward(request, response);
-            }else{
-                System.out.println("ログインエラー");
-                request.setAttribute("emperrer", "該当する会員情報がございません");
-                RequestDispatcher dispatch2 = request.getRequestDispatcher("index.jsp");
-                dispatch2.forward(request, response);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }catch (Exception e){
+                e.printStackTrace();
             }
-        } catch (SQLException e) {
 
-            e.printStackTrace();
         }
+
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // TODO Auto-generated method stub
