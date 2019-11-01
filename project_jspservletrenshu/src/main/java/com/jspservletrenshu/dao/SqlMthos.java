@@ -84,4 +84,21 @@ public class SqlMthos {
         }
 
     }
+
+    public boolean DeleteEmployee(String code) throws SQLException {
+        String sql = "DELETE FROM user where code = ?";
+        Connection con = DBM.getConnection();
+        PreparedStatement ps = con.prepareStatement(sql);
+        ps.setString(1,code);
+
+        int result = ps.executeUpdate();
+        System.out.println(result);
+
+        if(result == 1){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 }

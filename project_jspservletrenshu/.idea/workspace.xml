@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f0a7cee-a6aa-415c-8f93-2f5c30e05cfa" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeDelete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/deleteend.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -10,13 +13,13 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeList.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/EmployeeList.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/dao/SqlMthos.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/jspservletrenshu/dao/SqlMthos.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/project_jspservletrenshu.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/project_jspservletrenshu.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/EmployeeUpdate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/dao/SqlMthos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/jspservletrenshu/dao/SqlMthos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/insert.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/insert.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/main.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/update.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/update.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,8 +74,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -273,6 +276,11 @@
       <workItem from="1572222239726" duration="2384000" />
       <workItem from="1572225780545" duration="3219000" />
       <workItem from="1572231626237" duration="3953000" />
+      <workItem from="1572308647685" duration="622000" />
+      <workItem from="1572502964375" duration="4422000" />
+      <workItem from="1572568035833" duration="1215000" />
+      <workItem from="1572571922903" duration="1898000" />
+      <workItem from="1572575166384" duration="2109000" />
     </task>
     <servers />
   </component>

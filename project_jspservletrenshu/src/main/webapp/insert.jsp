@@ -47,8 +47,6 @@ if(code_errer_msg == null){
     コード<input type="text" name = "code"><%=code_errer_msg %>>
     <input type="submit" value="登録">
 </form>
-<form action = "index.jsp" method ="get">
-    <input type="submit" name ="hiddenid" value="戻る">
-</form>
+
 </body>
 </html>

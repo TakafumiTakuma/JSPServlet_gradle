@@ -33,7 +33,7 @@ public class EmployeeList extends HttpServlet {
         String username = (String) request.getParameter("name");
         String userpass = (String) request.getParameter("pass");
 
-        String hidden_val = (String) request.getAttribute("hiddenid");
+//        String hidden_val = (String) request.getAttribute("hiddenid");
 
 
         int namefrg = 0;
@@ -50,12 +50,12 @@ public class EmployeeList extends HttpServlet {
             passfrg = 1;
         }
 
-        if (namefrg == 1 || passfrg == 1 || hidden_val == null) {
+        if (namefrg == 1 || passfrg == 1) {
             RequestDispatcher dispatch1 = request.getRequestDispatcher("index.jsp");
             dispatch1.forward(request, response);
             return;
 
-        }else {
+        }
 
             /**
              * ログイン入力チェック
@@ -63,7 +63,7 @@ public class EmployeeList extends HttpServlet {
             try {
 
                 SqlMthos sqlmthos = new SqlMthos();
-                System.out.println("59行");
+                System.out.println("66行");
 
 
                 if (sqlmthos.getSelectEmploee(username, userpass)) {
@@ -101,7 +101,7 @@ public class EmployeeList extends HttpServlet {
                 e.printStackTrace();
             }
 
-        }
+
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
