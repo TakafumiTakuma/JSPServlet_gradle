@@ -14,7 +14,7 @@
 <h1>会員登録完了</h1>
 <p>登録が完了しました</p>
 <form action = "EmployeeList" method="get">
-    <input type="submit" value="メインに戻る">
+    <input type="submit" name = "insert_back_hidden" value="メインに戻る">
 </form>
 </body>
 </html>

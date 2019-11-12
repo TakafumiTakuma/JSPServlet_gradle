@@ -16,13 +16,17 @@
 <%
 String code_errer_msg = (String)request.getAttribute("errercode");
 
+if(code_errer_msg == null){
+    code_errer_msg = "";
+}
+
 %>
 <form action="EmployeeDelete" method = "get">
     削除コード<input type="text" name="code"><%= code_errer_msg%><br>
     <input type="submit" value="削除">
 </form>
-<form action="index.jsp" method="get">
-    <input type="submit" value="ログイン画面に戻る">
+<form action="EmployeeList" method="get">
+    <input type="submit" name = "delete_back_hidden" value="ログイン画面に戻る">
 </form>
 </body>
 </html>

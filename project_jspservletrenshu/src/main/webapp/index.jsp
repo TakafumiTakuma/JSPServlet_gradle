@@ -35,7 +35,7 @@
     <%= emperrermsg%><br>
     名前<input type="text" name="name"><%=nameerrermsg%><br>
     パスワード<input type="password" name="pass"><%=passerrermsg%><br>
-    <input type="submit" value="ログイン" >
+    <input type="submit" name = "login_hidden" value="ログイン" >
   </form>
   </body>
 </html>

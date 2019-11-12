@@ -29,6 +29,8 @@ public class EmployeeInsert extends HttpServlet {
         String insert_tell = (String)request.getParameter("tell");
         String insert_password = (String)request.getParameter("password");
         String insert_code = (String)request.getParameter("code");
+        String insert_hidden = (String)request.getParameter("insert_hidden");
+
 
         int insert_namefrg = 0;
         int insert_agefrg = 0;
@@ -36,33 +38,35 @@ public class EmployeeInsert extends HttpServlet {
         int insert_passwordfrg = 0;
         int insert_codefrg = 0;
 
-        if(insert_name.equals("") || insert_name == null){
-            request.setAttribute("insert_name_errer","名前の入力が正しくありません");
-            insert_namefrg = 1;
-        }
-        if(insert_age.equals("") || insert_age == null){
-            request.setAttribute("insert_age_errer","年齢の入力が正しくありません");
-            insert_agefrg = 1;
-        }
-        if(insert_tell.equals("") || insert_tell == null){
-            request.setAttribute("insert_tell_errer","電話番号の入力が正しくありません");
-            insert_tellfrg = 1;
-        }
-        if(insert_password.equals("") || insert_password == null){
-            request.setAttribute("insert_password_errer","パスワードの入力が正しくありません");
-            insert_passwordfrg = 1;
-        }
+        if(insert_hidden != null){
+            if(insert_name.equals("") || insert_name == null){
+                request.setAttribute("insert_name_errer","名前の入力が正しくありません");
+                insert_namefrg = 1;
+            }
+            if(insert_age.equals("") || insert_age == null){
+                request.setAttribute("insert_age_errer","年齢の入力が正しくありません");
+                insert_agefrg = 1;
+            }
+            if(insert_tell.equals("") || insert_tell == null){
+                request.setAttribute("insert_tell_errer","電話番号の入力が正しくありません");
+                insert_tellfrg = 1;
+            }
+            if(insert_password.equals("") || insert_password == null){
+                request.setAttribute("insert_password_errer","パスワードの入力が正しくありません");
+                insert_passwordfrg = 1;
+            }
 
-        if(insert_code.equals("") || insert_code == null){
-            request.setAttribute("insert_password_errer","パスワードの入力が正しくありません");
-            insert_codefrg = 1;
-        }
+            if(insert_code.equals("") || insert_code == null){
+                request.setAttribute("insert_password_errer","パスワードの入力が正しくありません");
+                insert_codefrg = 1;
+            }
 
-        if(insert_namefrg == 1 || insert_agefrg == 1 || insert_tellfrg == 1 || insert_passwordfrg == 1 || insert_codefrg == 1){
+            if(insert_namefrg == 1 || insert_agefrg == 1 || insert_tellfrg == 1 || insert_passwordfrg == 1 || insert_codefrg == 1){
 
-            RequestDispatcher dispatch = request.getRequestDispatcher("insert.jsp");
-            dispatch.forward(request, response);
-            return;
+                RequestDispatcher dispatch = request.getRequestDispatcher("insert.jsp");
+                dispatch.forward(request, response);
+                return;
+            }
         }
 
         SqlMthos sqlmethod = new SqlMthos();

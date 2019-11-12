@@ -45,7 +45,7 @@ if(code_errer_msg == null){
     電話番号<input type="text" name = "tell"><%=tell_errer_msg%><br>
     パスワード<input type="password" name = "password"><%=password_errer_msg%><br>
     コード<input type="text" name = "code"><%=code_errer_msg %>>
-    <input type="submit" value="登録">
+    <input type="submit" name = "insert_hidden" value="登録">
 </form>
 
 </body>

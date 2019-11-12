@@ -34,8 +34,8 @@ public class EmployeeDelete extends HttpServlet {
         }
 
         if(codefrg == 1){
-            RequestDispatcher dispatch1 = request.getRequestDispatcher("delete.jsp");
-            dispatch1.forward(request, response);
+            RequestDispatcher dispatch = request.getRequestDispatcher("delete.jsp");
+            dispatch.forward(request, response);
             return;
         }
 
@@ -44,8 +44,8 @@ public class EmployeeDelete extends HttpServlet {
         try{
             sqlmtos.DeleteEmployee(code);
 
-            RequestDispatcher dispatch1 = request.getRequestDispatcher("deleteend.jsp");
-            dispatch1.forward(request, response);
+            RequestDispatcher dispatch = request.getRequestDispatcher("deleteend.jsp");
+            dispatch.forward(request, response);
 
         }catch (SQLException e){
             e.getStackTrace();
